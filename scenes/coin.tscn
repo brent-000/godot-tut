@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cv7wrmajmohlq"]
 
 [ext_resource type="Texture2D" uid="uid://dcvx5ji3y5ov7" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_63uaj"]
-[ext_resource type="Script" path="res://scenes/coin.gd" id="1_stl5l"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_stl5l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8nxfk"]
 radius = 5.0
