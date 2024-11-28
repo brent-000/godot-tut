@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv7wrmajmohlq"]
+[gd_scene load_steps=21 format=3 uid="uid://cv7wrmajmohlq"]
 
 [ext_resource type="Texture2D" uid="uid://dcvx5ji3y5ov7" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_63uaj"]
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_stl5l"]
+[ext_resource type="AudioStream" uid="uid://bhwwmr3a3rbkf" path="res://brackeys_platformer_assets/sounds/coin.wav" id="3_d1leu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8nxfk"]
 radius = 5.0
@@ -210,8 +211,9 @@ autoplay = "spin"
 frame_progress = 0.566563
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_d1leu")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="PickupAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_nbj13")
 }
