@@ -24,17 +24,18 @@ func _physics_process(delta: float) -> void:
 			coyote_timer = 0
 			velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Get direction from key press: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
-	if direction == 1:
-		animated_sprite_2d.flip_h = false
-		velocity.x = direction * SPEED 
-	elif direction == -1:
-		animated_sprite_2d.flip_h = true
+	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	# Flip H according to direction
+	if direction == 1:
+		animated_sprite_2d.flip_h = false
+	elif direction == -1:
+		animated_sprite_2d.flip_h = true
 
 	move_and_slide()
 
